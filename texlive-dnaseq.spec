@@ -6,7 +6,7 @@
 # catalog-version 0.01
 Name:		texlive-dnaseq
 Version:	0.01
-Release:	9
+Release:	10
 Summary:	Format DNA base sequences
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/dnaseq
