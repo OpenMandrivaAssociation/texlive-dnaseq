@@ -1,19 +1,13 @@
-# revision 17194
-# category Package
-# catalog-ctan /macros/latex/contrib/dnaseq
-# catalog-date 2010-02-24 21:28:09 +0100
-# catalog-license lppl
-# catalog-version 0.01
 Name:		texlive-dnaseq
-Version:	0.01
-Release:	11
+Version:	17194
+Release:	1
 Summary:	Format DNA base sequences
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/dnaseq
 License:	LPPL
-Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/dnaseq.tar.xz
-Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/dnaseq.doc.tar.xz
-Source2:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/dnaseq.source.tar.xz
+Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/dnaseq.r%{version}.tar.xz
+Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/dnaseq.doc.r%{version}.tar.xz
+Source2:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/dnaseq.source.r%{version}.tar.xz
 BuildArch:	noarch
 BuildRequires:	texlive-tlpkg
 Requires(pre):	texlive-tlpkg
@@ -26,12 +20,12 @@ coloured. For a more 'vanilla-flavoured' way of typesetting
 base sequences, the user might consider the seqsplit package.
 
 %post
-    %{_sbindir}/texlive.post
+%{_sbindir}/texlive.post
 
 %postun
-    if [ $1 -eq 0 ]; then
+if [ $1 -eq 0 ]; then
 	%{_sbindir}/texlive.post
-    fi
+fi
 
 #-----------------------------------------------------------------------
 %files
@@ -45,24 +39,11 @@ base sequences, the user might consider the seqsplit package.
 
 #-----------------------------------------------------------------------
 %prep
-%setup -c -a0 -a1 -a2
+%setup -c -a1 -a2
+%autopatch -p1
 
 %build
 
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar tex doc source %{buildroot}%{_texmfdistdir}
-
-
-%changelog
-* Wed Jan 04 2012 Paulo Andrade <pcpa@mandriva.com.br> 0.01-2
-+ Revision: 751004
-- Rebuild to reduce used resources
-
-* Sat Nov 05 2011 Paulo Andrade <pcpa@mandriva.com.br> 0.01-1
-+ Revision: 718241
-- texlive-dnaseq
-- texlive-dnaseq
-- texlive-dnaseq
-- texlive-dnaseq
-
