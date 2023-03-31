@@ -1,6 +1,6 @@
 Name:		texlive-dnaseq
 Version:	17194
-Release:	1
+Release:	2
 Summary:	Format DNA base sequences
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/dnaseq
