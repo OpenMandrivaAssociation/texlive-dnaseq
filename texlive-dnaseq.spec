@@ -3,7 +3,7 @@ Version:	17194
 Release:	2
 Summary:	Format DNA base sequences
 Group:		Publishing
-URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/dnaseq
+URL:		https://www.ctan.org/tex-archive/macros/latex/contrib/dnaseq
 License:	LPPL
 Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/dnaseq.r%{version}.tar.xz
 Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/dnaseq.doc.r%{version}.tar.xz
